@@ -9,7 +9,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif; }
+  font-family: 'Open-Sans', 'Helvetica Neue', Arial, sans-serif; }
 
 hr {
   max-width: 50px;
@@ -162,7 +162,7 @@ header.masthead {
     padding: 150px 15px 100px;
     text-align: center; }
     header.masthead .header-content .header-content-inner h1 {
-      font-size: 30px;
+      font-size: 10px;
       font-weight: 700;
       margin-top: 0;
       margin-bottom: 0;
