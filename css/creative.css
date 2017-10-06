@@ -40,6 +40,9 @@ p {
   line-height: 1.5;
   margin-bottom: 20px; }
 
+.bg-success {
+  background-color: #28A7E6 !important; }
+
 .bg-primary {
   background-color: #F05F40 !important; }
 
