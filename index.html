@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+<style type="text/css">
+.bg-second {
+  background-image: "Terminal-icon.png" !important;
+  background:url("Terminal-icon.png") !important;
+  background-size: cover;
+  background: #dddddd;
+  background: -webkit-linear-gradient(#dddddd, #fdc539);
+  background: linear-gradient(#dddddd, #fdc539); }
 
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image01 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-01.jpg'); }
+  .image02 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-02.jpg'); }
+  .image03 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-03.jpg'); }
+  .image04 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-04.jpg'); }
+  .image05 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-05.jpg'); }
+  .image06 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-06.jpg'); }
+  .image07 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-07.jpg'); }
+  .image08 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-08.jpg'); }
+  .image09 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-09.jpg'); }
+  .image10 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-10.jpg'); }
+  .image11 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-11.jpg'); }
+  .image12 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-12.jpg'); }
+
+  @media screen and (max-width: 400px) {
+    .image-grid {
+      flex-direction: column;
+      flex-wrap: no-wrap;
+    }
+
+    .image-grid div { width: 100%; }
+  }
+</style>
+-->
   <head>
 
     <meta charset="utf-8">
@@ -8,21 +45,107 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>.</title>
+    <title>New Age - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/new-age.min.css" rel="stylesheet">
+
+    <style>
+
+    .image-grid div {
+    width: 25%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image01 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-01.jpg'); }
+  .image02 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-02.jpg'); }
+  .image03 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-03.jpg'); }
+  .image04 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-04.jpg'); }
+  .image05 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-05.jpg'); }
+  .image06 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-06.jpg'); }
+  .image07 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-07.jpg'); }
+  .image08 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-08.jpg'); }
+  .image09 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-09.jpg'); }
+  .image10 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-10.jpg'); }
+  .image11 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-11.jpg'); }
+  .image12 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-12.jpg'); }
+
+  @media screen and (max-width: 400px) {
+    .image-grid {
+      flex-direction: column;
+      flex-wrap: no-wrap;
+    }
+    .image-grid div { width: 100%; }
+  }
+
+
+  .portfolio-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto; }
+    .portfolio-box .portfolio-box-caption {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      opacity: 0;
+      color: white;
+      background: rgba(240, 95, 64, 0.9);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s; }
+      .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        text-align: center; }
+        .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+        .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+          padding: 0 15px;
+          font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
+        .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase; }
+        .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+          font-size: 18px; }
+    .portfolio-box:hover .portfolio-box-caption {
+      opacity: 1; }
+    .portfolio-box:focus {
+      outline: none; }
+    @media (min-width: 768px) {
+      .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px; }
+      .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px; } }
+
+
+    </style>
 
   </head>
 
@@ -31,212 +154,122 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">[-]</a>
+        <!--
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">home</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          Menu
+          <i class="fa fa-bars"></i>
         </button>
+        -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#support">Support</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">CCI Toolbox</h1>
-          <p>Welcome to Cate, the Climate Analysis Toolbox for the ESA Climate Change Initiative.</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">.</a>
-        </div>
-      </div>
-    </header>
-
-    <section class="bg-success" style="background-color: #aaaaaa !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            Cate is a software environment for ingesting, operating on and visualising data from all ECV projects of the Climate Change Initiative (CCI).
-            </h2>
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
+      <div class="contact h-100" id="home">
+        <div class="row h-100" style="background-image:url('img/header.jpg');">
+          <div class="col-lg-1">
           </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-success" style="background-color: #bbbbbb !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            Cate works by mashing all the different types of ECV data into a Common Data Model.
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            Users then apply operations, including their own, to that Common Data Model.
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            Visualise them too.
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-success" style="background-color: #aaaaaa !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            Cate is Open Source and was first made available on Github in January 2016. We will be releasing Cate Version 1.0 soon.
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">There are three ways to use Cate.</h2>
-            <hr class="primary">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-              <h3>A Command Line Interface</h3>
-              <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+          <div class="col-lg-6 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">
+                <div style="color:#ffffff">CCI Toolbox</div>
+                <div style="color:#F4B12A">
+                Welcome to Cate, the Climate Analysis Toolbox for the ESA Climate Change Initiative.
+                </div>
+                </h1>
+              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">About</a>
             </div>
           </div>
-          <div class="col-md-4 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-              <h3>A Graphical User Interface</h3>
-              <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-            </div>
           </div>
-          <div class="col-md-4 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-              <h3>A Cate Python API</h3>
-              <p class="text-muted">We update dependencies to keep things fresh.</p>
+        </div>
+      </div>
+
+    <section class="contact bg-primary text-center" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <h2>Cate is a software environment for ingesting, operating on and visualising all ESA Climate Change Initiative data.</h2>
+<p class="text-muted">
+  Cate works by mashing ECV data into a Common Data Model.
+  <br>Users operate on this model, <br>then visualise the results.
+</p>
+            <!-- <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--section class="download bg-primary text-center" id="download"-->
+    <section class="contact bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 my-auto text-center">
+          <h2>Cate Interfaces</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/mockgui.png" width="170" style="padding:10px")>
+                    <h3>A Graphical User Interface</h3>
+                    <p class="text-muted">
+                      A desktop application providing a graphical interface to the same functionality provided by the Command Line Interface.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/Terminal-icon.png" width="170" style="padding:10px")>
+                    <h3>A Command Line Interface</h3>
+                    <p class="text-muted">
+                    Access and process ESA climate data through a command shell or console terminal,
+                  and can also be used to write batch scripts.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/Python-icon.png" width="170" style="padding:10px")>
+                    <h3>A Python API.</h3>
+                    <p class="text-muted">
+                    The Cate Python API allows you to use Cate in your own Python programs,
+                    and make up new functions for Cate too.</p>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-success" style="background-color: #aaaaaa !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-              We will be releasing training material to help you along the way. Including YouTube videos. Here is everything you need to know to
-              Getting Started
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-success" style="background-color: #aaaaaa !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mx-auto text-center">
-            <h2 class="section-heading text-white">
-            !!!
-            </h2>
-          </div>
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">
-Cate is made for users, by users. We are here to help you and rely on your feedback. Learn more about our Champion Users and how we support you.
-            <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-success" style="background-color: #aaaaaa !important" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 mx-auto text-center">
-            <h2 class="section-heading text-white">
-Made in Germany. And Switzerland. And The Netherlands. And The United Kingdom.
-Cate is built through international cooperation, across both science and industry, and funded by the European Space Agency (ESA).
-Find out more about the team here. <p class="text-faded"></p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">@</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
 
 
+
+<!--
     <section class="p-0" id="portfolio">
       <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
@@ -333,33 +366,253 @@ Find out more about the team here. <p class="text-faded"></p>
         </div>
       </div>
     </section>
-
-    <div class="call-to-action bg-dark">
-      <div class="container text-center">
-        <h2>Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-default btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+-->
+<!--
+      <div class="image-grid">
+        <div class="image01"></div>
+        <div class="image02"></div>
+        <div class="image03"></div>
+        <div class="image04"></div>
+        <div class="image05"></div>
+        <div class="image06"></div>
+        <div class="image07"></div>
+        <div class="image08"></div>
+        <div class="image09"></div>
+        <div class="image10"></div>
+        <div class="image11"></div>
+        <div class="image12"></div>
       </div>
-    </div>
+-->
 
-    <section id="contact">
+    <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch</h2>
-            <hr class="primary">
-            <p>Let us know how we can support you. Do get in touch with any requests, questions and feedback you have.</p>
+          <div class="col-md-8">
+            <h2>Cate is Open Source.<br>
+              Version 1.0 is now available.<br>Includes installers for <br>Windows, Linux & Mac.</h2>
+              <br>
+
+              <p style="color:#F4B12A">
+              Here is how to get started.
+            1. Download the installer for your platform. We have Mac, Windows and Linux available.
+          2. Install.
+        3. Read the documentation here.</p>
+
+            <!-- <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div> -->
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
-            </p>
+          <div class="col-md-4 text-center ">
+            <img alt="githubLogo" src="img/Octocat.png" width="300" style="padding:0px"/><br>
+          <!--  <img alt="githubLogo" src="img/if_10_windows_353455.png" width="80" />
+            <img alt="githubLogo" src="img/if_linux-server-system-platform-os-computer-penguin_652577.png" width="90" />
+            <img alt="githubLogo" src="img/if_45_apple_353490.png" width="80" /> -->
           </div>
         </div>
       </div>
     </section>
+
+<!--
+    <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center ">
+            <img alt="githubLogo" src="img/GitHub-Logo.png" width="350" style="padding:30px"/>
+
+            <img alt="githubLogo" src="img/if_10_windows_353455.png" width="100" />
+            <img alt="githubLogo" src="img/if_linux-server-system-platform-os-computer-penguin_652577.png" width="120" />
+            <img alt="githubLogo" src="img/if_45_apple_353490.png" width="100" />
+          </div>
+          <div class="col-md-8">
+            <h2>Here is how to get started.<br>
+              Version 1.0 is now available.<br>Includes installers for <br>Windows, Linux & Mac.</h2>
+            <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+
+
+
+    <section class="contact" id="support" id="download" style="color:#ffffff;background-color:#0F3B54">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>
+              Cate is made for users, by users. <br>We are here to support you.
+            </h2>
+            <p style="color:#F4B12A">
+Here is everything you need to know to Get Started.
+<br>
+We'll have YouTube training videos for you soon. <br>But not yet. We're working on it.
+  </p>
+
+            <!-- <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div> -->
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_support_701493.png" width="270" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="download" style="color:#ffffff;background-color:#0F2C43">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>
+              We rely on your feedback.<br>
+              Let's make this product better<br>
+            </h2>
+            <p style="color:#F4B12A">
+We develop Cate by using Agile methodologies, <br> working side by side with users.<br>
+This enables us to quickly respond to user needs. <br> Give us your feedback. We're listening.
+
+  </p>
+
+            <!-- <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div> -->
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_icon-83_667357.png" width="200" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="team" id="download" style="color:#ffffff;background-color:#4C4C4C">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_5360_-_Dzone_1313559.png" width="220" />
+
+<img src="img/44_digital_logo_white_HI.png" width="220" />
+
+
+          </div>
+                    <div class="col-md-8">
+            <h2>
+              Made in Germany. <br>( And Switzerland ) <br>[ And The Netherlands ] <br>{ And The United Kingdom }
+            </h2>
+  <p style="color:#F4B12A">
+    Cate is built through international cooperation, <br>across both science and industry,<br>
+    and is supported by the European Space Agency (ESA).<br>
+    Find out more about our team here.<br>
+  </p>
+
+            <!-- <div class="badges">
+              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!--
+    <div class="contact h-100" id="home">
+      <div class="row h-100" style="background-image:url('img/header.jpg');">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-6 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">
+              <div style="color:#ffffff">CCI Toolbox</div>
+              <div style="color:#F4B12A">
+              Welcome to Cate, the Climate Analysis Toolbox for the ESA Climate Change Initiative.
+              </div>
+              </h1>
+            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">About</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+-->
+
+<!--
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Unlimited Features, Unlimited Fun</h2>
+          <p class="text-muted">Check out what you can do with this app theme!</p>
+          <hr>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features" style="color:#F4B12A;background-color: lightblue">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Unlimited Features, Unlimited Fun</h2>
+          <p class="text-muted">Check out what you can do with this app theme!</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <i class="icon-screen-smartphone text-primary"></i>
+                    <h3>Device Mockups</h3>
+                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <i class="icon-camera text-primary"></i>
+                    <h3>Flexible Use</h3>
+                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <i class="icon-camera text-primary"></i>
+                    <h3>Flexible Use</h3>
+                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="contact" style="color:#F4B12A;background-color: lightblue">
+      <div class="col-lg-4"></div>
+
+      <div class="col-lg-4 my-auto text-center" style="color:#F4B12A;background-color: lightblue">
+        <div style="color:#F4B12A;background-color: lightblue">
+        <h2>Cate is a software environment for ingesting, operating on and visualising all ESA Climate Change Initiative data.</h2>
+        </div>
+      </div>
+
+            <div class="col-lg-4"></div>
+    </section>
+-->
+    <footer>
+      <div class="container">
+        <p>&copy; 2017 CCI Toolbox. All Rights Reserved.</p>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -368,11 +621,9 @@ Find out more about the team here. <p class="text-faded"></p>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/new-age.min.js"></script>
 
   </body>
 
