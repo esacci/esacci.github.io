@@ -1,43 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-<style type="text/css">
-.bg-second {
-  background-image: "Terminal-icon.png" !important;
-  background:url("Terminal-icon.png") !important;
-  background-size: cover;
-  background: #dddddd;
-  background: -webkit-linear-gradient(#dddddd, #fdc539);
-  background: linear-gradient(#dddddd, #fdc539); }
 
-  .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .image01 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-01.jpg'); }
-  .image02 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-02.jpg'); }
-  .image03 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-03.jpg'); }
-  .image04 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-04.jpg'); }
-  .image05 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-05.jpg'); }
-  .image06 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-06.jpg'); }
-  .image07 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-07.jpg'); }
-  .image08 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-08.jpg'); }
-  .image09 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-09.jpg'); }
-  .image10 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-10.jpg'); }
-  .image11 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-11.jpg'); }
-  .image12 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-12.jpg'); }
-
-  @media screen and (max-width: 400px) {
-    .image-grid {
-      flex-direction: column;
-      flex-wrap: no-wrap;
-    }
-
-    .image-grid div { width: 100%; }
-  }
-</style>
--->
   <head>
 
     <meta charset="utf-8">
@@ -99,21 +62,6 @@
     }
     .image-grid div { width: 100%; }
 
-
-
-
-/*
-    body {
-      margin: 0;
-      padding: 0;
-      background: rgb(230,230,230);
-
-      color: rgb(50,50,50);
-      font-family: 'Open Sans', sans-serif;
-      font-size: 112.5%;
-      line-height: 1.6em;
-    }
-*/
     /* ================ The Timeline ================ */
 
     .timeline {
@@ -393,7 +341,6 @@
 
   }
 
-
   .portfolio-box {
     position: relative;
     display: block;
@@ -437,20 +384,6 @@
         font-size: 16px; }
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px; } }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         body {
@@ -744,7 +677,131 @@
 
 
 
+        *{
+          margin:0;
+          box-sizing: border-box;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
 
+        /* Our wrapper */
+        .wrapper{
+          width: 902px;
+          height: 560px;
+          max-height:100vh;
+          position: absolute;
+          left:50%;
+          top:50%;
+          transform:translate3d(-50%,-50%,0);
+          overflow:hidden;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+
+
+        /* Our image information */
+        .bottom,
+        .middle,
+        .top {
+          width:100%;
+          height:100%;
+          background-repeat:no-repeat;
+          background-color: white;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top:0;
+          left:0;
+          pointer-events:none;
+          overflow: hidden;
+          &>img{
+            height:100%;
+          }
+        }
+
+        .top{
+          width:125px;
+        }
+
+        .scroller{
+          width: 50px;
+          height:50px;
+          position: absolute;
+          left:100px;
+          top:50%;
+          transform:translateY(-50%);
+          border-radius:50%;
+          background-color: #fff;
+          opacity:0.9;
+          transition: opacity 0.12s ease-in-out;
+          pointer-events:auto;
+          cursor: pointer;
+          box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
+        }
+        .scroller-middle{
+          margin-top:25px;
+        }
+        .scroller-top{
+          margin-top:-25px;
+        }
+
+
+        .scroller:hover{
+          opacity:1;
+        }
+
+        .scrolling{
+          pointer-events:none;
+          opacity:1;
+          // z-index: 1;
+        }
+
+        .scroller__thumb{
+          width:100%;
+          height:100%;
+          border-radius:50%;
+          padding: 7px;
+        }
+
+        .scroller:before,
+        .scroller:after{
+          content:" ";
+          display: block;
+          width: 7px;
+          height: 9999px;
+          position: absolute;
+          left: 50%;
+          margin-left: -3.5px;
+          z-index: 30;
+          transition:0.1s;
+          box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
+        }
+        .scroller:before{
+          top:49px;
+        }
+        .scroller:after{
+          bottom:49px;
+        }
+
+        /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+        .scroller-middle>.scroller__thumb{
+          border: 5px solid #FFCCBC;
+        }
+        .scroller-middle:before,
+        .scroller-middle:after{
+          background: #FFCCBC;
+        }
+
+        .scroller-top>.scroller__thumb{
+          border: 5px solid #FFAB91;
+        }
+        .scroller-top:before,
+        .scroller-top:after{
+          background: #FFAB91;
+        }
 
     </style>
 
@@ -755,13 +812,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <!--
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        -->
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -812,17 +863,14 @@
   Cate works by mashing ECV data into a Common Data Model.
   <br>Users operate on this model, <br>then visualise the results.
 </p>
-            <!-- <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div> -->
+
           </div>
         </div>
       </div>
     </section>
 
-    <!--section class="download bg-primary text-center" id="download"-->
-    <section class="contact bg-primary">
+
+    <section class="contact text-center" style="background-color:#FFB031">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 my-auto text-center">
@@ -867,123 +915,64 @@
 
 
 
+    <section class="contact text-center bg-primary">
+      <div class="container">
+
+          <div class="row">
+            <div class="col-md-10 mx-auto">
+              <h2>The Graphical User Interface</h2>
+  <p class="text-muted">
+The basic idea of Cate Desktop is to allow access all remote <br>CCI data sources a
+nd calling all Cate operations
+through a consistent interface. <br>The results of opening a data source or applying an operations is usually
+<br>an in-memory dataset representation -
+this is what Cate calls a resource.
+  </p>
+  <br>
+
+            </div>
+          </div>
 
 
 
-<!--
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+
+
+
+      <div class="row">
+
+        <div class="col-lg-12 my-auto text-center" style="height:520px">
+
+    <div id="page">
+    <div class="wrapper">
+      <div class="bottom">
+        <!--img src="http://static.tinypic.com/i/tinypic-branding_@1x.png" draggable="false"/>-->
+        <img src="img/descriptionblock.jpg" draggable="false"/>
       </div>
-    </section>
--->
-<!--
-      <div class="image-grid">
-        <div class="image01"></div>
-        <div class="image02"></div>
-        <div class="image03"></div>
-        <div class="image04"></div>
-        <div class="image05"></div>
-        <div class="image06"></div>
-        <div class="image07"></div>
-        <div class="image08"></div>
-        <div class="image09"></div>
-        <div class="image10"></div>
-        <div class="image11"></div>
-        <div class="image12"></div>
+      <div class="middle">
+        <img src="img/guiblock.jpg" draggable="false"/>
       </div>
--->
+      <div class="scroller scroller-middle">
+        <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0 50 37 68 37 32 0 50" style="fill:#FFCCBC"/><polygon points="100 50 64 32 64 68 100 50" style="fill:#FFCCBC"/></svg>
+      </div>
+      <div class="top">
+        <img src="img/descriptionblock.jpg" draggable="false"/>
+      </div>
+      <div class="scroller scroller-top">
+        <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91"/><polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91"/></svg>
+      </div>
+    </div>
+    </div>
+
+
+
+  </div>
+
+
+</div>
+  </div>
+</section>
+
+
 
     <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
       <div class="container">
@@ -998,12 +987,6 @@ Whether you're on Mac, Windows or Linux, how you use Cate is pretty much the sam
 First follow the download instructions below, then let's talk about
 <a class="js-scroll-trigger" href="#support">documentation</a>.
 </p>
-
-            <!-- <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div> -->
-
 
 
             <!-- The Timeline -->
@@ -1054,9 +1037,7 @@ First follow the download instructions below, then let's talk about
           </div>
           <div class="col-md-4 text-center ">
             <img alt="githubLogo" src="img/Octocat.png" width="300" style="padding:0px"/><br>
-          <!--  <img alt="githubLogo" src="img/if_10_windows_353455.png" width="80" />
-            <img alt="githubLogo" src="img/if_linux-server-system-platform-os-computer-penguin_652577.png" width="90" />
-            <img alt="githubLogo" src="img/if_45_apple_353490.png" width="80" /> -->
+
           </div>
         </div>
 
@@ -1092,10 +1073,7 @@ includes <a href="http://ect-core.readthedocs.io/en/latest/architecture.html">Ca
 We'll have YouTube training videos for you soon. <br>But not yet. We're still working on those.
   </p>
 
-            <!-- <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div> -->
+
           </div>
           <div class="col-md-4">
               <img alt="githubLogo" src="img/document.png" width="230" />
@@ -1103,29 +1081,6 @@ We'll have YouTube training videos for you soon. <br>But not yet. We're still wo
         </div>
       </div>
     </section>
-<!--
-    <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center ">
-            <img alt="githubLogo" src="img/GitHub-Logo.png" width="350" style="padding:30px"/>
-
-            <img alt="githubLogo" src="img/if_10_windows_353455.png" width="100" />
-            <img alt="githubLogo" src="img/if_linux-server-system-platform-os-computer-penguin_652577.png" width="120" />
-            <img alt="githubLogo" src="img/if_45_apple_353490.png" width="100" />
-          </div>
-          <div class="col-md-8">
-            <h2>Here is how to get started.<br>
-              Version 1.0 is now available.<br>Includes installers for <br>Windows, Linux & Mac.</h2>
-            <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
--->
 
 
 
@@ -1142,10 +1097,7 @@ Please post any support requests, bug reports, <br> or feature requests in the
 We'll then take it from there, and keep you updated.
   </p>
 
-            <!-- <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div> -->
+
           </div>
           <div class="col-md-4">
               <img alt="githubLogo" src="img/if_support_701493.png" width="240" />
@@ -1170,10 +1122,7 @@ So do please give us your feedback via <br>the
 We're listening.
   </p>
 
-            <!-- <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div> -->
+
           </div>
           <div class="col-md-4">
               <img alt="githubLogo" src="img/if_icon-83_667357.png" width="200" />
@@ -1187,8 +1136,6 @@ We're listening.
         <div class="row">
           <div class="col-md-4">
               <img alt="githubLogo" src="img/if_5360_-_Dzone_1313559.png" width="320" />
-
-<!--img src="img/44_digital_logo_white_HI.png" width="220" /-->
 
 
           </div>
@@ -1218,95 +1165,8 @@ We're listening.
       </div>
     </section>
 
-<!--
-    <div class="contact h-100" id="home">
-      <div class="row h-100" style="background-image:url('img/header.jpg');">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-6 my-auto">
-          <div class="header-content mx-auto">
-            <h1 class="mb-5">
-              <div style="color:#ffffff">CCI Toolbox</div>
-              <div style="color:#F4B12A">
-              Welcome to Cate, the Climate Analysis Toolbox for the ESA Climate Change Initiative.
-              </div>
-              </h1>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">About</a>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
 
--->
-
-<!--
-
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>Unlimited Features, Unlimited Fun</h2>
-          <p class="text-muted">Check out what you can do with this app theme!</p>
-          <hr>
-        </div>
-      </div>
-    </section>
-
-    <section class="features" id="features" style="color:#F4B12A;background-color: lightblue">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>Unlimited Features, Unlimited Fun</h2>
-          <p class="text-muted">Check out what you can do with this app theme!</p>
-          <hr>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 my-auto">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="feature-item">
-                    <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>Device Mockups</h3>
-                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="feature-item">
-                    <i class="icon-camera text-primary"></i>
-                    <h3>Flexible Use</h3>
-                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="feature-item">
-                    <i class="icon-camera text-primary"></i>
-                    <h3>Flexible Use</h3>
-                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-    <section id="contact" style="color:#F4B12A;background-color: lightblue">
-      <div class="col-lg-4"></div>
-
-      <div class="col-lg-4 my-auto text-center" style="color:#F4B12A;background-color: lightblue">
-        <div style="color:#F4B12A;background-color: lightblue">
-        <h2>Cate is a software environment for ingesting, operating on and visualising all ESA Climate Change Initiative data.</h2>
-        </div>
-      </div>
-
-            <div class="col-lg-4"></div>
-    </section>
--->
-    <footer style="color:#aaaaaa;background-color:#000000">
+    <footer style="color:#808080;background-color:#000000">
       <div class="container">
         <p><br>&copy; 2017 CCI Toolbox Project Partners. All Rights Reserved.
           The CCI Toolbox software is provided under the <a style="color:#aaaaaa" href="https://opensource.org/licenses/MIT">
@@ -1344,6 +1204,134 @@ We're listening.
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
+
+    <script>
+
+    // I hope this over-commenting helps. Let's do this!
+    // Let's use the 'active' variable to let us know when we're using it
+    let active = false;
+    // and define our dom elements to make it easier to read
+    let scrollerMiddle = document.querySelector('.scroller-middle');
+    let scrollerTop = document.querySelector('.scroller-top');
+
+
+    // First we'll have to set up our event listeners
+    // We want to watch for clicks on our scroller
+    scrollerMiddle.addEventListener('mousedown',function(){
+      active = "middle";
+      // Add our scrolling class so the scroller has full opacity while active
+      scrollerMiddle.classList.add('scrolling');
+    });
+    // We also want to watch the body for changes to the state,
+    // like moving around and releasing the click
+    // so let's set up our event listeners
+    document.body.addEventListener('mouseup',function(){
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+    document.body.addEventListener('mouseleave',function(){
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+    // We'll have to do the same for our top scroller
+    scrollerTop.addEventListener('mousedown',function(){
+        active = "top";
+        scrollerTop.classList.add('scrolling');
+    });
+    document.body.addEventListener('mouseup',function(){
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+    document.body.addEventListener('mouseleave',function(){
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+
+    // Let's figure out where their mouse is at
+    document.body.addEventListener('mousemove',function(e){
+      if (!active) return;
+      // Their mouse is here...
+      let x = e.pageX;
+      // but we want it relative to our wrapper
+      x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+      // Okay let's change our state
+      scrollIt(x);
+    });
+
+    // Let's use this function
+    function scrollIt(x){
+      // Calculate our transform
+      let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+      // we show all our bottom image but how much of our middle and top,
+      // that'll depend on what we're dragging
+      // if we're dragging the middle slider
+      if (active==="middle"){
+        document.querySelector('.middle').style.width = transform+"px";
+        scrollerMiddle.style.left = transform-25+"px";
+        // if we're using scroller-middle, middle must always be to the right of top
+        if (scrollerTop.getBoundingClientRect().left>scrollerMiddle.getBoundingClientRect().left-5){
+          document.querySelector('.top').style.width = transform-5+"px";
+          scrollerTop.style.left = transform-30+"px";
+        }
+      }
+      // if we're dragging the top slider
+      if (active==="top"){
+        document.querySelector('.top').style.width = transform+"px";
+        scrollerTop.style.left = transform-25+"px";
+        // if we're using scroller-top, top must always be to the left
+        if (scrollerTop.getBoundingClientRect().left>scrollerMiddle.getBoundingClientRect().left-5){
+          document.querySelector('.middle').style.width = transform+5+"px";
+          scrollerMiddle.style.left = transform-20+"px";
+        }
+      }
+    }
+
+    // Let's set our opening state based off the width,
+    // we want to show a bit of both images so the user can see what's going on
+    active = "middle";
+    scrollIt(460);
+    active = "top";
+    scrollIt(230);
+    active = false;
+
+
+    // And finally let's repeat the process for touch events
+    // first our middle scroller...
+    scrollerMiddle.addEventListener('touchstart',function(){
+        active = "middle";
+        scrollerMiddle.classList.add('scrolling');
+    });
+    document.body.addEventListener('touchend',function(){
+        active = false;
+        scrollerMiddle.classList.remove('scrolling');
+    });
+    document.body.addEventListener('touchcancel',function(){
+        active = false;
+        scrollerMiddle.classList.remove('scrolling');
+    });
+
+    // then scroller top, our second scroller
+    scrollerTop.addEventListener('touchstart',function(){
+        active = "top";
+        scrollerTop.classList.add('scrolling');
+    });
+    document.body.addEventListener('touchend',function(){
+        active = false;
+        scrollerTop.classList.remove('scrolling');
+    });
+    document.body.addEventListener('touchcancel',function(){
+        active = false;
+        scrollerTop.classList.remove('scrolling');
+    });
+
+    document.querySelector('.wrapper').addEventListener('touchmove',function(e){
+        if (!active) return;
+        e.preventDefault();
+        let x = e.touches[0].pageX;
+        x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+        scrollIt(x);
+    });
+    </script>
 
   </body>
 
